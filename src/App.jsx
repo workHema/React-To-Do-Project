@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./assets/css/App.css";
 import Form from "./Form";
 import Todos from "./Todos";
+import { ToastContainer, toast } from 'react-toastify';
+
 
 function App() {
   const [todos, setTodos] = useState([
@@ -38,6 +40,7 @@ function App() {
   return (
     <>
       <div className="container">
+         <ToastContainer />
         <Form addNewTodo={addNewTodo} todos={todos}/>
         <Todos
           todos={todos}

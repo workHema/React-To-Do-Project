@@ -35,7 +35,7 @@ body {
 }
 
 input.todo-btn {
-  background-color: var(--darksecond);
+  background-color: var(--dark);
   color: #fff;
   outline: none;
   border: 3px solid var(--white);

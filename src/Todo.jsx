@@ -1,4 +1,5 @@
 import './assets/css/Form.css'
+import { ImCross } from "react-icons/im";
 function Todo({title, status, id, changeStatusValue, DeleteItem}){
 return <>
 <div className="list-render TodosContainer
@@ -9,7 +10,7 @@ return <>
 {title}
 
 </p>
-<button onClick={()=>{DeleteItem(id)}} className='todo-btn'>Delete</button>
+<button onClick={()=>{DeleteItem(id)}} className='todo-btn'><ImCross /></button>
 
 </div>
 

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { v4 as uuid } from "uuid";
 import './assets/css/Form.css'
+import { ToastContainer, toast } from 'react-toastify';
+
 
 function Form({ addNewTodo, todos=[] }) {
   const [title, setTitle] = useState("");
@@ -8,7 +10,8 @@ function Form({ addNewTodo, todos=[] }) {
   function handleSubmit(e) {
     e.preventDefault();
   if (title.trim().length === 0) {
-  alert("please put info");
+  toast.error('Invild input!' ,{autoClose: 1000,});
+
   return;
 }
 
@@ -17,7 +20,8 @@ function Form({ addNewTodo, todos=[] }) {
     );
 
     if (isDuplicate) {
-      alert("This todo already exists!");
+      toast.info('This Entry already exists!');
+
       return;
     }
 
